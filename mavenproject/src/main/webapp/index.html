@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<script src="common/js/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script>
+    $(function (){
+        console.log("开始");
+        $.ajax({
+            url:"/mavenproject/getIndex",
+            success:function (data){
+                console.log(data);
+
+            }
+        })
+    })
+</script>
+<body>
+
+</body>
+</html>

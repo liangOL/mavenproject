@@ -1,7 +1,12 @@
 package controller;
 
+import org.apache.logging.log4j.core.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+
 
 /**
  * @ClassName Mycontroller
@@ -12,8 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @Controller
 public class Mycontroller {
-    @RequestMapping(value = "/getMeg")
-    public String getIndex(){
+    Logger logger = (Logger) LoggerFactory.getLogger(Mycontroller.class);
+    @RequestMapping(value = "/getIndex")
+    @ResponseBody
+    public String getIndex(HttpServletRequest request){
+        logger.info("12345");
         return "hello world!";
     }
 }
