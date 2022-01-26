@@ -8,16 +8,21 @@
 <script>
     $(function (){
         console.log("开始");
-        $.ajax({
-            url:"/mavenproject/getIndex",
-            success:function (data){
-                console.log(data);
+        $("#cs").click(function (){
+            console.log("点击");
+            $.ajax({
+                url:"/mavenproject/getIndex",
+                type:"POST",
+                success:function (data){
+                    console.log(data);
+                }
+            })
 
-            }
-        })
+        });
+
     })
 </script>
 <body>
-
+<BUTTON id="cs">点击</BUTTON>
 </body>
 </html>
